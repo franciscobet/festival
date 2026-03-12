@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Valley Festival 2026 | Vibe Coding Week</title>
+    <meta name="description" content="Bienvenido al festival musical más increíble. Consigue tus tickets, conoce el lineup y únete a la experiencia.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">VIBEFEST<span>26</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#lineup">Artistas</a></li>
+            <li><a href="#tickets" class="btn-primary">Tickets</a></li>
+        </ul>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <div class="hero-bg" id="dynamic-hero-bg" style="background-image: url('hero-bg.png');"></div>
+        <div class="hero-content wrapper">
+            <h1 class="glitch" data-text="NEON VALLEY">NEON VALLEY</h1>
+            <p class="subtitle">MUSIC FESTIVAL 2026</p>
+            <div class="event-details">
+                <div class="detail">
+                    <span class="icon">📅</span>
+                    <span>15 - 17 de Octubre, 2026</span>
+                </div>
+                <div class="detail">
+                    <span class="icon">📍</span>
+                    <span>Arena Valle de Neón, Ciudad Cibernética</span>
+                </div>
+            </div>
+            <a href="#tickets" class="btn-large">Comprar Tickets</a>
+        </div>
+    </header>
+
+    <section id="lineup" class="lineup-section wrapper">
+        <h2 class="section-title">LINEUP EXCLUSIVO</h2>
+        <div class="artists-grid">
+            <div class="artist-card"><h3>COSMIC ARRAY</h3><p>Electrónica / Synthwave</p></div>
+            <div class="artist-card"><h3>NEON SYNDICATE</h3><p>Cyberpunk Techno</p></div>
+            <div class="artist-card"><h3>THE QUANTUM BEATS</h3><p>House / Trance</p></div>
+            <div class="artist-card"><h3>HOLOGRAPHIC DUSK</h3><p>Indie Dance</p></div>
+            <div class="artist-card"><h3>ECHO PULSE</h3><p>Deep House</p></div>
+            <div class="artist-card"><h3>NEBULA VOID</h3><p>Ambient Techno</p></div>
+        </div>
+    </section>
+
+    <section id="tickets" class="tickets-section wrapper">
+        <h2 class="section-title">CONSIGUE TUS ACCESOS</h2>
+        <div class="ticket-container">
+            <div class="ticket-options">
+                <div class="ticket-card" data-price="50" data-tier="General">
+                    <h3>Pase General</h3>
+                    <p class="price">$50<span>/día</span></p>
+                    <ul>
+                        <li>Acceso a todos los escenarios principales</li>
+                        <li>Zonas de comida y bebida</li>
+                        <li>Experiencias inmersivas</li>
+                    </ul>
+                    <button class="btn-select">Seleccionar</button>
+                </div>
+                <div class="ticket-card popular active" data-price="120" data-tier="VIP">
+                    <div class="badge">Más Popular</div>
+                    <h3>Pase VIP</h3>
+                    <p class="price">$120<span>/día</span></p>
+                    <ul>
+                        <li>Todo lo del Pase General</li>
+                        <li>Acceso rápido y zonas exclusivas</li>
+                        <li>Baños premium y barras privadas</li>
+                    </ul>
+                    <button class="btn-select">Seleccionado</button>
+                </div>
+                <div class="ticket-card" data-price="300" data-tier="Backstage">
+                    <h3>Backstage Pass</h3>
+                    <p class="price">$300<span>/día</span></p>
+                    <ul>
+                        <li>Todo lo del Pase VIP</li>
+                        <li>Acceso al Backstage VIP Lounge</li>
+                        <li>Meet & Greet con artistas selectos</li>
+                    </ul>
+                    <button class="btn-select">Seleccionar</button>
+                </div>
+            </div>
+
+            <div class="ticket-calculator">
+                <h3>Detalle de Compra</h3>
+                <div class="calc-row">
+                    <span>Tipo de Ticket:</span>
+                    <span id="selected-tier">Pase VIP</span>
+                </div>
+                <div class="calc-row quantity-selector">
+                    <span>Cantidad:</span>
+                    <div class="qty-controls">
+                        <button id="btn-minus">-</button>
+                        <span id="ticket-qty">1</span>
+                        <button id="btn-plus">+</button>
+                    </div>
+                </div>
+                <div class="calc-row total-row">
+                    <span>Total a Pagar:</span>
+                    <span id="total-price">$120</span>
+                </div>
+                <button id="btn-checkout" class="btn-checkout">Continuar al Pago</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 VibeFest. Proyecto Vibe Coding Week.</p>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-content">
+            <div class="success-icon">✔️</div>
+            <h2>¡Tickets Reservados!</h2>
+            <p>Tus tickets para <strong id="modal-tier"></strong> han sido separados de manera exitosa. Revisa tu correo electrónico para verificar tu identidad y luego completar el pago.</p>
+            <button class="btn-primary" id="btn-close-modal">Genial</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
